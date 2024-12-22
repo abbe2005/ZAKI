@@ -1,0 +1,138 @@
+/* Base Styles */
+body {
+    font-family: 'Roboto', sans-serif; /* Change to desired font */
+    background: linear-gradient(135deg, #0e0045, #6d005f); /* Beautiful gradient background */
+    color: #e0e0e0;
+    transition: background-color 0.3s ease;
+    position: relative; /* For positioning the fog effect */
+    /* Remove overflow hidden to allow scrolling */
+    overflow: auto; /* Allow scrolling */
+}
+
+.container {
+    text-align: center;
+    display: flex;
+    gap: 20px;
+    font-size: 3rem;
+    margin-bottom: 20px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    position: relative; /* For fog effect */
+}
+
+/* Countdown Styles */
+.countdown {
+    display: flex;
+    gap: 20px;
+    font-size: 3rem;
+    margin-bottom: 20px;
+    color: #e0e0e0; /* Set a visible color */
+}
+
+/* Time Box Styles */
+.time {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    animation: float 3s ease-in-out infinite, scaleUp 0.5s ease-in-out alternate; /* Countdown animation */
+}
+
+/* Unit Styles */
+.unit {
+    font-size: 1rem;
+    margin-left: 5px; /* Space between icon and text */
+}
+
+/* Fog Effect */
+.container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(255, 255, 255, 0.1);
+    filter: blur(10px);
+    z-index: -1;
+}
+
+/* Moving Shadows */
+@keyframes shadowMove {
+    0% { box-shadow: 0 0 20px rgba(0, 0, 0, 0.5); }
+    50% { box-shadow: 0 0 30px rgba(0, 0, 0, 0.7); }
+    100% { box-shadow: 0 0 20px rgba(0, 0, 0, 0.5); }
+}
+
+/* Countdown Animation */
+@keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-20px); }
+    100% { transform: translateY(0px); }
+}
+
+@keyframes scaleUp {
+    0% { transform: scale(1); }
+    100% { transform: scale(1.1); }
+}
+
+/* Responsive and Modern Design */
+@media (max-width: 600px) {
+    .countdown {
+        flex-wrap: wrap;
+        font-size: 2rem; /* Adjust font size for smaller screens */
+    }
+    .time {
+        font-size: 1.5rem; /* Adjust time box size */
+    }
+}
+
+@media (max-width: 400px) {
+    .countdown {
+        font-size: 1.5rem; /* Further adjust font size for very small screens */
+    }
+    .time {
+        font-size: 1.2rem; /* Further adjust time box size */
+    }
+}
+
+/* Music Control Styles */
+.music-control {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    border-radius: 10px;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+    transition: opacity 0.3s ease;
+}
+
+.music-control:hover {
+    opacity: 0.9; /* Slightly fade on hover */
+}
+
+#musicTitle {
+    font-size: 1.2rem;
+    margin-right: 10px; /* Space between title and button */
+}
+
+.toggle-button {
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.toggle-button:hover {
+    background: rgba(255, 255, 255, 0.4); /* Change background on hover */
+}

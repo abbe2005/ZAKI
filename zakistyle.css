@@ -1,0 +1,94 @@
+/* General Body Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+    background-color: #3a0043;
+    color: #ffffff; /* Text color for better contrast */
+}
+
+/* Header Styles */
+h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* Image Styles */
+.zaki-image {
+    max-width: 400px;
+    border-radius: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s;
+}
+
+.zaki-image:hover {
+    transform: scale(1.05); /* Slight zoom effect on hover */
+}
+
+/* Text Container Styles */
+.zaki-text {
+    background-color: rgba(255, 255, 255, 0.237); /* Semi-transparent white */
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Paragraph Styles */
+.zaki-text p {
+    line-height: 1.6;
+    font-size: 1.1em;
+    margin: 10px 0;
+}
+
+/* National Anthem Styles */
+.zaki-text h1 {
+    font-size: 2em;
+    margin-top: 20px;
+    color: #ffffff; /* Matching background color */
+}
+
+/* Link Styles */
+a {
+    display: block;
+    margin-top: 20px;
+    text-decoration: none;
+    color: #ffffff; /* Bootstrap primary color */
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+a:hover {
+    color: #ffffff; /* Darker shade on hover */
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    h1 {
+        font-size: 2em;
+    }
+
+    .zaki-image {
+        max-width: 90%; /* Responsive image */
+    }
+
+    .zaki-text {
+        padding: 15px; /* Adjust padding for smaller screens */
+    }
+}
+.respect-text {
+    font-size: 20px;
+    position: absolute; /* Position it as needed */
+    color: white; /* Default color */
+    animation: colorChange 1s infinite; /* Animation for color change */
+}
+
+@keyframes colorChange {
+    0% { color: red; }
+    33% { color: green; }
+    66% { color: blue; }
+    100% { color: red; }
+}
