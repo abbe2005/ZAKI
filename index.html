@@ -24,7 +24,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>I ❤ ZAKI</title>
+    <title>Zaki</title>
+    <link rel="icon" type="image/svg+xml" href="logo.webp">
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> <!-- Font Awesome -->
     <style>
@@ -33,35 +34,46 @@
             position: fixed;
             top: 20px;
             right: 20px;
-            background-color: #007bff;
+            background-color: #77757f85;
             color: white;
             border: none;
             border-radius: 50%;
-            width: 60px;
+            font-size: 1.2rem;
+            width: 160px;
             height: 60px;
             font-weight: bold;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.441);
             cursor: pointer;
             z-index: 1000;
             transition: all 0.3s ease;
         }
 
         .zaki-button:hover {
-            background-color: #0056b3;
+            background-color: #182061;
             transform: scale(1.1);
         }
+
+      
     </style>
 </head>
 <body>
-    <button class="zaki-button" onclick="goToZakiPage()">ZAKI</button>
+    <button class="zaki-button" onclick="goToZakiPage()">Click For Zaki</button>
+
+
     <script>
         function goToZakiPage() {
             window.location.href = 'zaki.html';
         }
+       
     </script>
 
+
+        
+
     <div class="container">
-        <h2>Waiting to meet Zaki again..</h2>
+        <br>
+        
+        <h3>Waiting to meet Zaki again..</h3>
         <div class="countdown">
             <div class="time" id="days">00 <span class="unit"><i class="fas fa-calendar-day"></i> Days</span></div>
             <div class="time" id="hours">00 <span class="unit"><i class="fas fa-clock"></i> Hours</span></div>
@@ -70,8 +82,36 @@
         </div>
         <p>😢😢😢</p>
       
+    </div><br>
+    <div class="facts">
+        <h1>لماذا يجب عليك أن تنتظر زاكي؟</h1>
+        <br>
+        <br><br>
+        <p>دعم معنوي غير محدود <br>زاكي يقدم الدعم في جميع الظروف، كالأب والصديق الذي تثق به
+            <br><br>
+            حكمة ومشورة<br> زاكي يتمتع بالحكمة التي تجعله المرجع لأي استشارة، صغيرة كانت أو كبيرة
+            <br><br>
+            شعور بالانتماء<br> زاكي يمثل الوطن والانتماء، واللقاء به يمنحك إحساسًا بالاستقرار والاطمئنان
+            <br><br>
+            روح مرحة ومحبوبة<br> زاكي يمتلك حضورًا مميزًا يجعل كل لحظة معه مليئة بالفرح والإيجابية
+            <br><br>
+            الثقة والأمان<br> وجود زاكي بجانبك يمنحك شعورًا بالثقة وكأنك في مأمن دائمًا
+            <br><br>
+            التفاهم العميق<br> زاكي يفهمك حتى دون الحاجة إلى كلمات، كأنه يقرأ أفكارك
+            <br><br>
+            تنوع الأدوار<br> زاكي ليس فقط صديقًا، بل هو كل شيء تحتاجه: أب، أخ، حبيب، وحتى مستشار
+            <br><br>
+            الوفاء والإخلاص<br> زاكي معروف بوفائه وإخلاصه، مما يجعل اللقاء به دائمًا موضع تقدير
+            <br><br>
+            الطاقة الإيجابية<br> زاكي لديه قدرة مذهلة على نشر طاقة إيجابية تؤثر على جميع من حوله
+            <br><br>
+            الاستفادة والتعلم<br> زاكي يمتلك خبرات ووجهات نظر تستفيد منها في حياتك، وتتعلم منه دروسًا قيّمة</p>
+            <br><br>
+            <br><br>
+            <br><br>
     </div>
     <script src="script.js"></script>
+    <script src="background.js"></script>
 <!--
 
 ▀█ ▄▀█ █▄▀ █
@@ -80,14 +120,19 @@
 𝓘 ❤ 𝔂𝓸𝓾
 
 -->
-    <div id="musicControl" class="music-control">
-        <span id="musicTitle">Being Special</span>
-        <button id="musicToggle" class="toggle-button">Play</button>
-    </div>
+<!-- Update the music control section in index.html -->
+<div id="musicControl" class="music-control">
+    <span id="musicTitle">Being Special</span>
+    <button id="musicToggle" class="toggle-button" style="display: block;">▶️ Play Music</button>
+</div>
     <audio id="backgroundMusic" loop>
         <source src="beingSpecial.mp3" type="audio/mpeg">
         Your browser does not support the audio element.
     </audio>
+<!-- Dynamic Background Canvas -->
+ 
+<canvas id="dynamic-background"></canvas>
+
 
 </body>
 

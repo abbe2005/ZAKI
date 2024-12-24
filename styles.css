@@ -1,14 +1,50 @@
-/* Base Styles */
-body {
-    font-family: 'Roboto', sans-serif; /* Change to desired font */
-    background: linear-gradient(135deg, #0e0045, #6d005f); /* Beautiful gradient background */
-    color: #e0e0e0;
-    transition: background-color 0.3s ease;
-    position: relative; /* For positioning the fog effect */
-    /* Remove overflow hidden to allow scrolling */
-    overflow: auto; /* Allow scrolling */
+/* Dynamic Background Styles */
+:root {
+    --bg-day-start: #006891;     /* Sky Blue for day */
+    --bg-day-end: #bababa;       /* Light Blue gradient end */
+    --bg-night-start: #0E0045;   /* Deep Blue/Purple for night */
+    --bg-night-end: #43003a;     /* Dark Purple gradient end */
 }
 
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    overflow: auto;
+    transition: background 2s ease;
+    background: linear-gradient(135deg, var(--bg-day-start), var(--bg-day-end));
+}
+
+/* Dynamic Background Canvas */
+#dynamic-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    pointer-events: none;
+}
+
+/* Particle Styles */
+.particle {
+    position: absolute;
+    background: rgba(255, 255, 255, 0.581);
+    border-radius: 50%;
+    pointer-events: none;
+    transition: all 0.5s ease;
+}
+
+/* Night Mode Adjustments */
+body.night-mode {
+    background: linear-gradient(135deg, var(--bg-night-start), var(--bg-night-end));
+    color: #e0e0e0;
+}
+
+body.night-mode .countdown {
+    color: #ffffff;
+}
+
+/* Rest of your existing CSS remains the same */
 .container {
     text-align: center;
     display: flex;
@@ -19,7 +55,7 @@ body {
     align-items: center;
     justify-content: center;
     min-height: 100vh;
-    position: relative; /* For fog effect */
+    position: relative; 
 }
 
 /* Countdown Styles */
@@ -58,7 +94,25 @@ body {
     filter: blur(10px);
     z-index: -1;
 }
+.facts {
+    text-align: center;
+    font-size: 1.3em;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.237); /* Semi-transparent white */
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 20px;
+    box-shadow: 0 4px 10px rgba(255, 255, 255, 0.28);
+}
+.facts h1 {
+    text-align: center;
 
+    align-items: center;
+    font-size: 2em;
+    margin-top: 20px;
+    color: #ffffff;
+    
+}
 /* Moving Shadows */
 @keyframes shadowMove {
     0% { box-shadow: 0 0 20px rgba(0, 0, 0, 0.5); }

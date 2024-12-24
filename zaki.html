@@ -4,79 +4,135 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Zaki</title>
+    <link rel="icon" type="image/svg+xml" href="logo.webp">
     <link rel="stylesheet" href="zakistyle.css">
 </head>
 <body>
-    <h1>Zaki</h1>
     
+    <br>
+    <br>
+    <br>
+    <br>
     
     
     <div class="zaki-text">
+        <h1>يازاكي</h1>
         <p>
-            Zaki is an incredible person who means the world to me. 
-            Their kindness, love, and support have been a constant source 
-            of inspiration and joy in my life. Every moment spent together 
-            is a precious memory I cherish deeply.
+            يا زاكي أحبك فوق الظنون
+            وأشدو بحبك في كل نادي
+            <br>
+
+            عشقت لأجلك كل جميل
+            وهمت لأجلك في كل وادي
+            <br>
+
+            ومن هام فيك أحب الجمال 
+            وإن لامه الغشم قال: زاكي 
+            <br>
+
+            و حتى إن أفلتك يا حبال
+            فأيتها السماء خذيني في علاكي
+            <br>
+            <br>
+            زاكي يا من توجه قلبي اليك
+            يا من وضعت أملي عليك
+            <br>
+
+            يا أجمل شخص قابلته في الحياة
+            لن أنساك ما دمت حيا لم أذق الممات
+            <br>
+
+            إنك تجعل نهاري مبتهجا
+            أكون في عسر يومي أراك فيأت الفرجا
+            <br>
+            <br>
+            <br>
+
+        </div>
         </p>
+        <div class="Zaki-Nashid">
         <h1>النشيد الوطني الزاكي</h1>
         <p>
              جاءنا زاكي من غليزان  
             فبث فينا الهدوء و الآمان
+            <br>
 
 فناكنا وراء الوديان
            يا زاكي أعطي لك و أنا فرحان
-
+           <br>
 زغدوا ذوك الترام
            وأمتعوا زاكي في الظلام
-
+           <br>
               زاكي...  زاكي...  زاكيييي...
-
+              <br><br>
 
 
 يا زاكي أني أراك في الأحلام 
                أستيقظ اذ سروالي مليء بالاستحلام
-
+               <br>
 مصاطتي لم تحتمل الآلام
                 إحساس لا أراه حتى في المنام
-
+                <br>
 نحن ثرنا شهوة على قلاويه
              و عقدت العزم زكي سأعطيه
-
+             <br>
                زاكي...  زاكي...  زاكيييي...
-
+               <br><br>
 
 
 الليل بدون زاكي دامس ظلامه
               زكك من البرد تنكسر عظامه
-
+              <br>
 لهذا خلي زاكي يضرب لك واحد
                  حتى يدفئ لك زكك البارد
-
+                 <br>
 بعد أن ينتهي امسحه بالقماش
                أيضا لا تنسى تنظيف الفراش
-
+               <br>
                زاكي...  زاكي...  زاكيييي...
-
+               <br><br>
 
 
 يا زاكي معك لم اعد أحتاج زبي
                       فأنت وحدك تنير دربي
-
+                      <br>
 جولة بعد جولة بزكك يلعب
             حتى لو طال الليل فهو لا يتعب
-
+            <br>
 أخبرتكم فاحفظوا الكلام
              أكتبه لكم بدمعة الآلام
-
+             <br>
                 زاكي...  زاكي...  زاكيييي...
+                <br><br>
              </p>
              <img src="Respect.jpeg" alt="Zaki" class="zaki-image" onclick="showRespect()">
+             <br><br>
+             <br><br><br><br><br><br>
              <div id="respect-message" class="respect-text" style="display: none;">+10 respect</div>
-             <script src="zakiscript.js"></script> 
             </div>
 
-    <a href="index.html" style="display: block; margin-top: 20px; text-decoration: none; color: rgba(255, 255, 255, 0.563);">
-        Back to Countdown
-    </a>
+             <script src="zakiscript.js"></script> 
+             <script src="background.js"></script>
+             <script src="script.js"></script>
+            
+
+            <button class="Countdown-button" onclick="goToCountdown()">Countdown</button>
+            <script>
+                function goToCountdown() {
+                    window.location.href = 'index.html';
+                }
+            </script>
+
+    <div id="musicControl" class="music-control">
+        <span id="musicTitle">Being Special</span>
+        <button id="musicToggle" class="toggle-button" style="display: block;">▶️ Play Music</button>
+    </div>
+        <audio id="backgroundMusic" loop>
+            <source src="beingSpecial.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+    <!-- Dynamic Background Canvas -->
+    <canvas id="dynamic-background"></canvas>
+    
 </body>
 </html>

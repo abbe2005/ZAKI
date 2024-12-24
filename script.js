@@ -1,22 +1,18 @@
 // script.js
 const countdownDate = new Date("January 5, 2025 00:00:00").getTime();
 
-
-
 document.addEventListener('DOMContentLoaded', function() {
     // Music Configuration
     const music = document.getElementById('backgroundMusic');
     const musicToggle = document.getElementById('musicToggle');
 
-    // Autoplay with User Interaction
-    function initMusic() {
-        music.volume = 0.3; // Soft volume
-        music.play().catch(error => {
-            console.log('Autoplay prevented', error);
-            // Fallback: Add user interaction requirement
-            musicToggle.style.display = 'block';
-        });
-    }
+    // Initially hide the music toggle button
+    musicToggle.style.display = 'block';
+    musicToggle.textContent = '▶️ Play Music';
+
+    // Prevent autoplay
+    music.volume = 0.3;
+    music.pause();
 
     // Music Toggle Functionality
     musicToggle.addEventListener('click', function() {
@@ -28,16 +24,7 @@ document.addEventListener('DOMContentLoaded', function() {
             musicToggle.textContent = '🔇 Paused';
         }
     });
-
-    // Autoplay on Page Load
-    window.addEventListener('click', function() {
-        initMusic();
-        // Remove this event listener after first interaction
-        this.removeEventListener('click', arguments.callee);
-    });
 });
-
-
 
 const countdownFunction = setInterval(() => {
     const now = new Date().getTime();
